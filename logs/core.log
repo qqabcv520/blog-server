@@ -1,0 +1,201 @@
+2017-05-28 15:11:46.474  INFO 13560 --- [main] lol.mifan.myblog.BlogServerApplication   : Starting BlogServerApplication on mifan-pc with PID 13560 (F:\code\idea\blog-server\target\classes started by 米饭 in F:\code\idea\blog-server)
+2017-05-28 15:11:46.478  INFO 13560 --- [main] lol.mifan.myblog.BlogServerApplication   : No active profile set, falling back to default profiles: default
+2017-05-28 15:11:46.532  INFO 13560 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@470f1802: startup date [Sun May 28 15:11:46 CST 2017]; root of context hierarchy
+2017-05-28 15:11:47.259  INFO 13560 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'exceptionResolver' with a different definition: replacing [Generic bean: class [lol.mifan.myblog.resolver.ExceptionResolver]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [F:\code\idea\blog-server\target\classes\lol\mifan\myblog\resolver\ExceptionResolver.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=springMvcConfig; factoryMethodName=exceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [lol/mifan/myblog/config/SpringMvcConfig.class]]
+2017-05-28 15:11:48.501  INFO 13560 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-05-28 15:11:48.517  INFO 13560 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-05-28 15:11:48.518  INFO 13560 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.14
+2017-05-28 15:11:48.624  INFO 13560 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-05-28 15:11:48.625  INFO 13560 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2096 ms
+2017-05-28 15:11:48.776  INFO 13560 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-05-28 15:11:48.780  INFO 13560 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-05-28 15:11:48.780  INFO 13560 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-05-28 15:11:48.781  INFO 13560 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-05-28 15:11:48.781  INFO 13560 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-05-28 15:11:49.277  INFO 13560 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-05-28 15:11:49.290  INFO 13560 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-05-28 15:11:49.347  INFO 13560 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-05-28 15:11:49.348  INFO 13560 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-05-28 15:11:49.349  INFO 13560 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-05-28 15:11:49.384  INFO 13560 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-05-28 15:11:49.477  INFO 13560 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-05-28 15:11:49.991  INFO 13560 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-05-28 15:11:50.966  INFO 13560 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-05-28 15:11:51.269  INFO 13560 --- [main] o.s.c.ehcache.EhCacheManagerFactoryBean  : Initializing EhCache CacheManager
+2017-05-28 15:11:51.691  INFO 13560 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@470f1802: startup date [Sun May 28 15:11:46 CST 2017]; root of context hierarchy
+2017-05-28 15:11:51.752  INFO 13560 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object lol.mifan.myblog.controller.TagController.get(java.lang.Integer,lol.mifan.myblog.po.Users)
+2017-05-28 15:11:51.754  INFO 13560 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/token],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public java.util.Map<java.lang.String, java.lang.Object> lol.mifan.myblog.controller.UserController.token(lol.mifan.myblog.po.Users) throws lol.mifan.myblog.exception.HttpException
+2017-05-28 15:11:51.756  INFO 13560 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-28 15:11:51.756  INFO 13560 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-05-28 15:11:51.785  INFO 13560 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-28 15:11:51.785  INFO 13560 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-28 15:11:51.815  INFO 13560 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-28 15:11:52.050  INFO 13560 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-05-28 15:11:52.102  INFO 13560 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-05-28 15:11:52.106  INFO 13560 --- [main] lol.mifan.myblog.BlogServerApplication   : Started BlogServerApplication in 6.048 seconds (JVM running for 6.5)
+2017-05-28 15:16:16.626  INFO 4344 --- [main] lol.mifan.myblog.BlogServerApplication   : Starting BlogServerApplication on mifan-pc with PID 4344 (F:\code\idea\blog-server\target\classes started by 米饭 in F:\code\idea\blog-server)
+2017-05-28 15:16:16.631  INFO 4344 --- [main] lol.mifan.myblog.BlogServerApplication   : No active profile set, falling back to default profiles: default
+2017-05-28 15:16:16.689  INFO 4344 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1e81f160: startup date [Sun May 28 15:16:16 CST 2017]; root of context hierarchy
+2017-05-28 15:16:17.517  INFO 4344 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'exceptionResolver' with a different definition: replacing [Generic bean: class [lol.mifan.myblog.resolver.ExceptionResolver]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [F:\code\idea\blog-server\target\classes\lol\mifan\myblog\resolver\ExceptionResolver.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=springMvcConfig; factoryMethodName=exceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [lol/mifan/myblog/config/SpringMvcConfig.class]]
+2017-05-28 15:16:18.810  INFO 4344 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-05-28 15:16:18.822  INFO 4344 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-05-28 15:16:18.823  INFO 4344 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.14
+2017-05-28 15:16:18.929  INFO 4344 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-05-28 15:16:18.930  INFO 4344 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2245 ms
+2017-05-28 15:16:19.142  INFO 4344 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-05-28 15:16:19.147  INFO 4344 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-05-28 15:16:19.148  INFO 4344 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-05-28 15:16:19.148  INFO 4344 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-05-28 15:16:19.148  INFO 4344 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-05-28 15:16:19.720  INFO 4344 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-05-28 15:16:19.733  INFO 4344 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-05-28 15:16:19.801  INFO 4344 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-05-28 15:16:19.802  INFO 4344 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-05-28 15:16:19.804  INFO 4344 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-05-28 15:16:19.852  INFO 4344 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-05-28 15:16:19.967  INFO 4344 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-05-28 15:16:20.577  INFO 4344 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-05-28 15:16:21.501  INFO 4344 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-05-28 15:16:21.875  INFO 4344 --- [main] o.s.c.ehcache.EhCacheManagerFactoryBean  : Initializing EhCache CacheManager
+2017-05-28 15:16:22.381  INFO 4344 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1e81f160: startup date [Sun May 28 15:16:16 CST 2017]; root of context hierarchy
+2017-05-28 15:16:22.460  INFO 4344 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object lol.mifan.myblog.controller.TagController.get(java.lang.Integer,lol.mifan.myblog.po.Users)
+2017-05-28 15:16:22.462  INFO 4344 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/token],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public java.util.Map<java.lang.String, java.lang.Object> lol.mifan.myblog.controller.UserController.token(lol.mifan.myblog.po.Users) throws lol.mifan.myblog.exception.HttpException
+2017-05-28 15:16:22.464  INFO 4344 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-28 15:16:22.464  INFO 4344 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-05-28 15:16:22.503  INFO 4344 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-28 15:16:22.503  INFO 4344 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-28 15:16:22.545  INFO 4344 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-28 15:16:22.973  INFO 4344 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-05-28 15:16:23.033  INFO 4344 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-05-28 15:16:23.037  INFO 4344 --- [main] lol.mifan.myblog.BlogServerApplication   : Started BlogServerApplication in 6.92 seconds (JVM running for 7.409)
+2017-05-28 15:16:28.531  INFO 4344 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-05-28 15:16:28.532  INFO 4344 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-05-28 15:16:28.558  INFO 4344 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2017-05-28 15:16:46.256  INFO 4344 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-05-28 15:19:21.778  INFO 2000 --- [main] lol.mifan.myblog.BlogServerApplication   : Starting BlogServerApplication on mifan-pc with PID 2000 (F:\code\idea\blog-server\target\classes started by 米饭 in F:\code\idea\blog-server)
+2017-05-28 15:19:21.782  INFO 2000 --- [main] lol.mifan.myblog.BlogServerApplication   : No active profile set, falling back to default profiles: default
+2017-05-28 15:19:21.838  INFO 2000 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1e81f160: startup date [Sun May 28 15:19:21 CST 2017]; root of context hierarchy
+2017-05-28 15:19:22.677  INFO 2000 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'exceptionResolver' with a different definition: replacing [Generic bean: class [lol.mifan.myblog.resolver.ExceptionResolver]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [F:\code\idea\blog-server\target\classes\lol\mifan\myblog\resolver\ExceptionResolver.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=springMvcConfig; factoryMethodName=exceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [lol/mifan/myblog/config/SpringMvcConfig.class]]
+2017-05-28 15:19:23.918  INFO 2000 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-05-28 15:19:23.929  INFO 2000 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-05-28 15:19:23.930  INFO 2000 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.14
+2017-05-28 15:19:24.023  INFO 2000 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-05-28 15:19:24.023  INFO 2000 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2188 ms
+2017-05-28 15:19:24.203  INFO 2000 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-05-28 15:19:24.209  INFO 2000 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-05-28 15:19:24.209  INFO 2000 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-05-28 15:19:24.209  INFO 2000 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-05-28 15:19:24.210  INFO 2000 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-05-28 15:19:24.762  INFO 2000 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-05-28 15:19:24.774  INFO 2000 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-05-28 15:19:24.840  INFO 2000 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-05-28 15:19:24.842  INFO 2000 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-05-28 15:19:24.843  INFO 2000 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-05-28 15:19:24.885  INFO 2000 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-05-28 15:19:25.000  INFO 2000 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-05-28 15:19:25.605  INFO 2000 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-05-28 15:19:26.492  INFO 2000 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-05-28 15:19:26.858  INFO 2000 --- [main] o.s.c.ehcache.EhCacheManagerFactoryBean  : Initializing EhCache CacheManager
+2017-05-28 15:19:27.377  INFO 2000 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1e81f160: startup date [Sun May 28 15:19:21 CST 2017]; root of context hierarchy
+2017-05-28 15:19:27.470  INFO 2000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object lol.mifan.myblog.controller.TagController.get(java.lang.Integer,lol.mifan.myblog.po.Users)
+2017-05-28 15:19:27.472  INFO 2000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/token],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public java.util.Map<java.lang.String, java.lang.Object> lol.mifan.myblog.controller.UserController.token(lol.mifan.myblog.po.Users) throws lol.mifan.myblog.exception.HttpException
+2017-05-28 15:19:27.474  INFO 2000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-28 15:19:27.475  INFO 2000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-05-28 15:19:27.520  INFO 2000 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-28 15:19:27.520  INFO 2000 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-28 15:19:27.566  INFO 2000 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-28 15:19:27.957  INFO 2000 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-05-28 15:19:28.016  INFO 2000 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-05-28 15:19:28.020  INFO 2000 --- [main] lol.mifan.myblog.BlogServerApplication   : Started BlogServerApplication in 6.728 seconds (JVM running for 7.171)
+2017-05-28 15:20:29.490  INFO 2000 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-05-28 15:20:29.490  INFO 2000 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-05-28 15:20:29.518  INFO 2000 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+2017-05-28 15:20:35.327  INFO 2000 --- [http-nio-8080-exec-2] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-05-28 15:29:38.115  INFO 1896 --- [main] lol.mifan.myblog.BlogServerApplication   : Starting BlogServerApplication on mifan-pc with PID 1896 (F:\code\idea\blog-server\target\classes started by 米饭 in F:\code\idea\blog-server)
+2017-05-28 15:29:38.118  INFO 1896 --- [main] lol.mifan.myblog.BlogServerApplication   : No active profile set, falling back to default profiles: default
+2017-05-28 15:29:38.168  INFO 1896 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@470f1802: startup date [Sun May 28 15:29:38 CST 2017]; root of context hierarchy
+2017-05-28 15:29:38.863  INFO 1896 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'exceptionResolver' with a different definition: replacing [Generic bean: class [lol.mifan.myblog.resolver.ExceptionResolver]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [F:\code\idea\blog-server\target\classes\lol\mifan\myblog\resolver\ExceptionResolver.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=springMvcConfig; factoryMethodName=exceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [lol/mifan/myblog/config/SpringMvcConfig.class]]
+2017-05-28 15:29:39.980  INFO 1896 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-05-28 15:29:39.993  INFO 1896 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-05-28 15:29:39.993  INFO 1896 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.14
+2017-05-28 15:29:40.089  INFO 1896 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-05-28 15:29:40.089  INFO 1896 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1924 ms
+2017-05-28 15:29:40.239  INFO 1896 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-05-28 15:29:40.243  INFO 1896 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-05-28 15:29:40.244  INFO 1896 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-05-28 15:29:40.244  INFO 1896 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-05-28 15:29:40.244  INFO 1896 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-05-28 15:29:40.715  INFO 1896 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-05-28 15:29:40.727  INFO 1896 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-05-28 15:29:40.784  INFO 1896 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-05-28 15:29:40.785  INFO 1896 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-05-28 15:29:40.786  INFO 1896 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-05-28 15:29:40.821  INFO 1896 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-05-28 15:29:40.913  INFO 1896 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-05-28 15:29:41.435  INFO 1896 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-05-28 15:29:42.364  INFO 1896 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-05-28 15:29:42.666  INFO 1896 --- [main] o.s.c.ehcache.EhCacheManagerFactoryBean  : Initializing EhCache CacheManager
+2017-05-28 15:29:43.058  INFO 1896 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@470f1802: startup date [Sun May 28 15:29:38 CST 2017]; root of context hierarchy
+2017-05-28 15:29:43.121  INFO 1896 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object lol.mifan.myblog.controller.TagController.get(java.lang.Integer)
+2017-05-28 15:29:43.122  INFO 1896 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/token],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public java.util.Map<java.lang.String, java.lang.Object> lol.mifan.myblog.controller.UserController.token(lol.mifan.myblog.po.Users) throws lol.mifan.myblog.exception.HttpException
+2017-05-28 15:29:43.124  INFO 1896 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-28 15:29:43.125  INFO 1896 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-05-28 15:29:43.152  INFO 1896 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-28 15:29:43.152  INFO 1896 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-28 15:29:43.183  INFO 1896 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-28 15:29:43.415  INFO 1896 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-05-28 15:29:43.467  INFO 1896 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-05-28 15:29:43.472  INFO 1896 --- [main] lol.mifan.myblog.BlogServerApplication   : Started BlogServerApplication in 5.76 seconds (JVM running for 6.198)
+2017-05-28 15:30:00.796  INFO 1896 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-05-28 15:30:00.796  INFO 1896 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-05-28 15:30:00.818  INFO 1896 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2017-05-28 15:30:00.900 ERROR 1896 --- [http-nio-8080-exec-1] l.m.myblog.resolver.ExceptionResolver    : public java.util.Map<java.lang.String, java.lang.Object> lol.mifan.myblog.controller.UserController.token(lol.mifan.myblog.po.Users) throws lol.mifan.myblog.exception.HttpException - org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.util.Map<java.lang.String, java.lang.Object> lol.mifan.myblog.controller.UserController.token(lol.mifan.myblog.po.Users) throws lol.mifan.myblog.exception.HttpException
+2017-05-28 15:44:29.131 ERROR 1896 --- [http-nio-8080-exec-2] l.m.myblog.resolver.ExceptionResolver    : public java.util.Map<java.lang.String, java.lang.Object> lol.mifan.myblog.controller.UserController.token(lol.mifan.myblog.po.Users) throws lol.mifan.myblog.exception.HttpException - org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.util.Map<java.lang.String, java.lang.Object> lol.mifan.myblog.controller.UserController.token(lol.mifan.myblog.po.Users) throws lol.mifan.myblog.exception.HttpException
+2017-05-28 18:46:53.214  INFO 1896 --- [http-nio-8080-exec-3] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-05-28 18:46:53.325  INFO 1896 --- [http-nio-8080-exec-3] l.m.myblog.controller.UserController     : 用户mifan登录，密码错误
+2017-05-28 20:23:02.648  INFO 1896 --- [http-nio-8080-exec-5] l.m.myblog.controller.UserController     : 用户mifan登录，密码错误
+2017-05-28 20:23:49.010  INFO 15576 --- [main] lol.mifan.myblog.BlogServerApplication   : Starting BlogServerApplication on mifan-pc with PID 15576 (F:\code\idea\blog-server\target\classes started by 米饭 in F:\code\idea\blog-server)
+2017-05-28 20:23:49.014  INFO 15576 --- [main] lol.mifan.myblog.BlogServerApplication   : No active profile set, falling back to default profiles: default
+2017-05-28 20:23:49.105  INFO 15576 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78dd667e: startup date [Sun May 28 20:23:49 CST 2017]; root of context hierarchy
+2017-05-28 20:23:50.060  INFO 15576 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'exceptionResolver' with a different definition: replacing [Generic bean: class [lol.mifan.myblog.resolver.ExceptionResolver]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [F:\code\idea\blog-server\target\classes\lol\mifan\myblog\resolver\ExceptionResolver.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=springMvcConfig; factoryMethodName=exceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [lol/mifan/myblog/config/SpringMvcConfig.class]]
+2017-05-28 20:23:51.186  INFO 15576 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-05-28 20:23:51.198  INFO 15576 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-05-28 20:23:51.199  INFO 15576 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.14
+2017-05-28 20:23:51.299  INFO 15576 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-05-28 20:23:51.299  INFO 15576 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2199 ms
+2017-05-28 20:23:51.460  INFO 15576 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-05-28 20:23:51.463  INFO 15576 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-05-28 20:23:51.463  INFO 15576 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-05-28 20:23:51.463  INFO 15576 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-05-28 20:23:51.464  INFO 15576 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-05-28 20:23:52.001  INFO 15576 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-05-28 20:23:52.076  INFO 15576 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-05-28 20:23:52.261  INFO 15576 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-05-28 20:23:52.262  INFO 15576 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-05-28 20:23:52.263  INFO 15576 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-05-28 20:23:52.318  INFO 15576 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-05-28 20:23:52.433  INFO 15576 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-05-28 20:23:52.982  INFO 15576 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-05-28 20:23:54.068  INFO 15576 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-05-28 20:23:54.419  INFO 15576 --- [main] o.s.c.ehcache.EhCacheManagerFactoryBean  : Initializing EhCache CacheManager
+2017-05-28 20:23:54.790  INFO 15576 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78dd667e: startup date [Sun May 28 20:23:49 CST 2017]; root of context hierarchy
+2017-05-28 20:23:54.843  INFO 15576 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object lol.mifan.myblog.controller.TagController.get(java.lang.Integer)
+2017-05-28 20:23:54.845  INFO 15576 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/token],methods=[POST],consumes=[application/json],produces=[application/json;charset=UTF-8]}" onto public java.util.Map<java.lang.String, java.lang.Object> lol.mifan.myblog.controller.UserController.token(lol.mifan.myblog.po.Users) throws lol.mifan.myblog.exception.HttpException
+2017-05-28 20:23:54.846  INFO 15576 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-28 20:23:54.847  INFO 15576 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-05-28 20:23:54.870  INFO 15576 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-28 20:23:54.870  INFO 15576 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-28 20:23:54.895  INFO 15576 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-28 20:23:55.115  INFO 15576 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-05-28 20:23:55.162  INFO 15576 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-05-28 20:23:55.166  INFO 15576 --- [main] lol.mifan.myblog.BlogServerApplication   : Started BlogServerApplication in 6.477 seconds (JVM running for 6.876)
