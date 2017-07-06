@@ -12,8 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by 米饭 on 2017-05-22.
@@ -26,7 +25,7 @@ public class TagServiceImpl extends EntityServiceImpl<Tag, Integer> implements T
 
     @Override
     public Tag get(Integer id) {
-        return tagDao.findByIdAndDeletedFalse(id);
+        return tagDao.findOne(id);
     }
 
 
@@ -34,9 +33,9 @@ public class TagServiceImpl extends EntityServiceImpl<Tag, Integer> implements T
     public List<Tag> getList(Integer offset, Integer limit, String query) {
         Pageable pageable = new PageRequest(offset/limit, limit, Sort.Direction.ASC,"name");
         if(StringUtils.isEmpty(query)) {
-            return tagDao.findAllByDeletedFalse(pageable);
+            return tagDao.findAll(pageable).getContent();
         }
-        return tagDao.findAllByNameContainingAndDeletedFalse(query, pageable);
+        return tagDao.findAllByNameContaining(query, pageable);
     }
 
 
@@ -47,6 +46,16 @@ public class TagServiceImpl extends EntityServiceImpl<Tag, Integer> implements T
         map.put("name", tag.getName());
         return map;
     }
+
+    @Override
+    public Object toJsonArray(Iterable<Tag> tags) {
+        List<Object> tagList = new ArrayList<>();
+        for(Tag tag : tags) {
+            tagList.add(toJsonObj(tag));
+        }
+        return tagList;
+    }
+
 
     @Override
     public JpaRepository<Tag, Integer> getEntityDao() {

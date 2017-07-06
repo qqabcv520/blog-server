@@ -118,7 +118,45 @@ public class ControllerTests extends BlogServerApplicationTests {
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
                 .get("/tags/1/articles")
                 .param("offset", "0")
-                .param("limit", "2")
+                .param("limit", "100")
+                .header("Username", username)
+                .header("Nonce", nonce)
+                .header("CurTime", curTime)
+                .header("Digest", digest)
+                ;
+
+        MvcResult result = mockMvc.perform(requestBuilder)
+                .andDo(MockMvcResultHandlers.print())
+                .andReturn();
+
+        Assert.assertEquals(result.getResponse().getStatus(), 200);
+    }
+
+    @Test
+    public void getArticle() throws Exception {
+
+
+        MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
+                .get("/articles/448")
+                .header("Username", username)
+                .header("Nonce", nonce)
+                .header("CurTime", curTime)
+                .header("Digest", digest)
+                ;
+
+        MvcResult result = mockMvc.perform(requestBuilder)
+                .andDo(MockMvcResultHandlers.print())
+                .andReturn();
+
+        Assert.assertEquals(result.getResponse().getStatus(), 200);
+    }
+
+    @Test
+    public void getReview() throws Exception {
+
+
+        MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
+                .get("/articles/404/reviews")
                 .header("Username", username)
                 .header("Nonce", nonce)
                 .header("CurTime", curTime)

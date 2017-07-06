@@ -12,9 +12,6 @@ import java.util.List;
  */
 public interface TagDao extends JpaRepository<Tag, Integer> {
 
-     Tag findByIdAndDeletedFalse(Integer id);
 
-     List<Tag> findAllByNameContainingAndDeletedFalse(String name, Pageable pageable);
-
-     List<Tag> findAllByDeletedFalse(Pageable pageable);
+     List<Tag> findAllByNameContaining(String name, Pageable pageable);
 }

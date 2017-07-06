@@ -16,20 +16,14 @@ public class Tag implements java.io.Serializable {
 
 	private Integer id;
 	private String name;
-	private boolean deleted;
 	private String note;
 	private Set<Article> articles = new HashSet<Article>(0);
 
 	public Tag() {
 	}
 
-	public Tag(boolean deleted) {
-		this.deleted = deleted;
-	}
-
-	public Tag(String name, boolean deleted, String note, Set<Article> articles) {
+	public Tag(String name, String note, Set<Article> articles) {
 		this.name = name;
-		this.deleted = deleted;
 		this.note = note;
 		this.articles = articles;
 	}
@@ -53,15 +47,6 @@ public class Tag implements java.io.Serializable {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	@Column(name = "deleted", nullable = false)
-	public boolean isDeleted() {
-		return this.deleted;
-	}
-
-	public void setDeleted(boolean deleted) {
-		this.deleted = deleted;
 	}
 
 	@Column(name = "note")

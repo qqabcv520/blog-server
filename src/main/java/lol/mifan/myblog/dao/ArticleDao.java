@@ -13,10 +13,10 @@ import java.util.List;
  */
 public interface ArticleDao extends JpaRepository<Article, Integer> {
 
-    @Query("SELECT t.articles FROM Article as a, Tag as t WHERE t.id = ?1")
+    @Query("SELECT a FROM Article AS a INNER JOIN a.tags AS t WHERE t.id = ?1 AND a.deleted = false")
     List<Article> findAllByTagId(Integer tagId, Pageable pageable);
 
+    Article findByIdAndDeletedFalse(Integer tagId);
 
-    List<Article> findAllByTagsAndDeletedFalse(Tag tag, Pageable pageable);
-
+    List<Article> findAllByDeletedFalse(Pageable pageable);
 }

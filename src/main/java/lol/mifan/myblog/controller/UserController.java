@@ -71,7 +71,7 @@ public class UserController {
 
 
     @DeleteMapping(value = "/token")
-    public Map<String, Object> deleteToken() {
+    public void deleteToken() {
 
         Subject subject = SecurityUtils.getSubject();
         String username = (String) subject.getPrincipal();
@@ -81,9 +81,6 @@ public class UserController {
         subject.logout();
 
         logger.info("用户" + username + "登出成功");
-
-        Map<String, Object> map = new HashMap<>();
-        return map;
     }
 
 

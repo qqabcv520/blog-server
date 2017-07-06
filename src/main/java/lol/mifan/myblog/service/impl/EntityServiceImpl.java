@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.Serializable;
+import java.util.Collection;
 
 /**
  * Created by 米饭 on 2017-05-26.
@@ -88,5 +89,10 @@ public abstract class EntityServiceImpl<T, ID extends Serializable> implements E
     @Override
     public Object toJsonObj(T entity) {
         return entity;
+    }
+
+    @Override
+    public Object toJsonArray(Iterable<T> entities) {
+        return entities;
     }
 }
