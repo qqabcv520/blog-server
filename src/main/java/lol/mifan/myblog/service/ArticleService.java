@@ -13,15 +13,15 @@ public interface ArticleService extends EntityService<Article, Integer> {
     /**
      * 根据tag主键获取文章集合
      * @param tagId tag主键
-     * @param limit
-     * @param offset
+     * @param page
+     * @param size
      * @return 文章集合
      */
-    List<Article> getArticlesByTagId(int tagId, Integer limit, Integer offset);
+    List<Article> getArticlesByTagId(int tagId, Integer page, Integer size);
 
 
     Article get(int articleId);
 
 
-    List<Article> getList(Integer limit, Integer offset);
+    List<Article> getList(Integer page, Integer size);
 }

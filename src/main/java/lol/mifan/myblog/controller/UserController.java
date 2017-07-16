@@ -5,6 +5,7 @@ import lol.mifan.myblog.exception.HttpException;
 import lol.mifan.myblog.service.EncryptService;
 import lol.mifan.myblog.service.UserService;
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
@@ -49,10 +50,11 @@ public class UserController {
         } catch (UnknownAccountException e) {
             logger.info("用户" + username + "登录，用户名不存在");
             throw new HttpException(403, "用户名不存在");
-        } catch (IncorrectCredentialsException e) {
+        } catch (AuthenticationException e) {
             logger.info("用户" + username + "登录，密码错误");
             throw new HttpException(401, "密码错误");
         }
+
 
         String token = encryptService.generateToken();
         Users user = userService.findByUsername(username);

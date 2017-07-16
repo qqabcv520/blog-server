@@ -6,6 +6,7 @@ import lol.mifan.myblog.po.Tag;
 import lol.mifan.myblog.po.Users;
 import lol.mifan.myblog.service.ReviewService;
 import lol.mifan.myblog.service.TagService;
+import lol.mifan.myblog.service.UserService;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -26,24 +27,26 @@ public class ReviewServiceImpl extends EntityServiceImpl<Review, Integer> implem
 
     @Resource
     private ReviewDao reviewDao;
+    @Resource
+    private UserService userService;
 
 
     @Override
-    public List<Review> getReviewsByArticleId(int articleId, Integer offset, Integer limit) {
+    public List<Review> getReviewsByArticleId(int articleId, Integer page, Integer size) {
         Sort sort = new Sort(Sort.Direction.DESC,"createTime");
-        limit = (limit==null || limit==0) ? Integer.MAX_VALUE : limit;//默认值无穷大
-        offset = offset == null ? 0 : limit;//默认值0
-        Pageable pageable = new PageRequest(offset/limit, limit, sort);
+        size = size == null ? Integer.MAX_VALUE : size;//默认值无穷大
+        page = page == null ? 0 : page;//默认值0
+        Pageable pageable = new PageRequest(page, size, sort);
 
         return reviewDao.findAllByArticle_IdAndDeletedFalse(articleId, pageable);
     }
 
     @Override
-    public List<Review> getReviewsByReviewId(int reviewId, Integer offset, Integer limit) {
+    public List<Review> getReviewsByReviewId(int reviewId, Integer page, Integer size) {
         Sort sort = new Sort(Sort.Direction.DESC,"createTime");
-        limit = (limit==null || limit==0) ? Integer.MAX_VALUE : limit;//默认值无穷大
-        offset = offset == null ? 0 : limit;//默认值0
-        Pageable pageable = new PageRequest(offset/limit, limit, sort);
+        size = size == null  ? Integer.MAX_VALUE : size;//默认值无穷大
+        page = page == null ? 0 : page;//默认值0
+        Pageable pageable = new PageRequest(page, size, sort);
 
         return reviewDao.findAllByReview_IdAndDeletedFalse(reviewId, pageable);
     }
@@ -60,7 +63,7 @@ public class ReviewServiceImpl extends EntityServiceImpl<Review, Integer> implem
 
         Users user = review.getUsers();
         if(user != null) {
-            map.put("user", user.getUsername());
+            map.put("user", userService.toJsonObj(user));
         }
         map.put("reviews", childReviewJson);
         return map;

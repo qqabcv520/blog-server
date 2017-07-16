@@ -31,16 +31,16 @@ public class TagController {
     @Resource
     private ArticleService articleService;
 
-    @RequiresPermissions("tag:read")
+//    @RequiresPermissions("tag:read")
     @GetMapping(value = "/{id}")
-    public Object get(@PathVariable Integer id)  {
+    public Object get(@PathVariable Integer id) {
         Tag tag = tagService.get(id);
         return tagService.toJsonObj(tag);
     }
 
 	@GetMapping
-    public List<Object> getList(Integer limit, Integer offset, String query)  {
-        List<Tag> tags = tagService.getList(offset, limit, query);
+    public List<Object> getList(Integer page, Integer size, String query)  {
+        List<Tag> tags = tagService.getList(page, size, query);
         List<Object> list = new ArrayList<>();
         for(Tag tag : tags) {
             list.add(tagService.toJsonObj(tag));
@@ -49,8 +49,8 @@ public class TagController {
     }
 
 	@GetMapping(value = "/{tagId}/articles")
-    public Object getArticles(@PathVariable("tagId")int tagId, Integer offset, Integer limit)  {
-        List<Article> articles = articleService.getArticlesByTagId(tagId, limit, offset);
+    public Object getArticles(@PathVariable("tagId")int tagId, Integer page, Integer size)  {
+        List<Article> articles = articleService.getArticlesByTagId(tagId, page, size);
         return articleService.toJsonArray(articles);
 	}
 

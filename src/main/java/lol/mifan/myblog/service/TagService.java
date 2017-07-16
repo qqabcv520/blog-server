@@ -19,12 +19,12 @@ public interface TagService extends EntityService<Tag, Integer> {
 
     /**
      * 获取tag集合
-     * @param offset 偏移量
-     * @param limit 个数
+     * @param page 偏移量
+     * @param size 个数
      * @param query tag名字模糊搜索
      * @return tag集合
      */
-    List<Tag> getList(Integer offset, Integer limit, String query);
+    List<Tag> getList(Integer page, Integer size, String query);
 
 
 }

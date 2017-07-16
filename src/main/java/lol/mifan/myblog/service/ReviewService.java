@@ -9,9 +9,9 @@ import java.util.List;
  * Created by 米饭 on 2017-07-01.
  */
 public interface ReviewService extends EntityService<Review, Integer> {
-    List<Review> getReviewsByArticleId(int AarticleId, Integer offset, Integer limit);
+    List<Review> getReviewsByArticleId(int AarticleId, Integer page, Integer size);
 
-    List<Review> getReviewsByReviewId(int reviewId, Integer offset, Integer limit);
+    List<Review> getReviewsByReviewId(int reviewId, Integer page, Integer size);
 
 
     /**

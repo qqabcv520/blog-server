@@ -133,6 +133,27 @@ public class ControllerTests extends BlogServerApplicationTests {
     }
 
     @Test
+    public void getArticleList() throws Exception {
+
+
+        MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
+                .get("/articles")
+                .param("offset", "5")
+                .param("limit", "10")
+                .header("Username", username)
+                .header("Nonce", nonce)
+                .header("CurTime", curTime)
+                .header("Digest", digest)
+                ;
+
+        MvcResult result = mockMvc.perform(requestBuilder)
+                .andDo(MockMvcResultHandlers.print())
+                .andReturn();
+
+        Assert.assertEquals(result.getResponse().getStatus(), 200);
+    }
+
+    @Test
     public void getArticle() throws Exception {
 
 

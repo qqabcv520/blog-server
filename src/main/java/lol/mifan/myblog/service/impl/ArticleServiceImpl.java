@@ -43,22 +43,22 @@ public class ArticleServiceImpl extends EntityServiceImpl<Article, Integer> impl
     }
 
     @Override
-    public List<Article> getList(Integer limit, Integer offset) {
+    public List<Article> getList(Integer page, Integer size) {
         Sort sort = new Sort(Sort.Direction.DESC,"sort");
         sort.and(new Sort(Sort.Direction.DESC,"createTime"));
-        limit = (limit==null || limit==0) ? Integer.MAX_VALUE : limit;//默认值无穷大
-        offset = offset == null ? 0 : limit;//默认值0
-        Pageable pageable = new PageRequest(offset/limit, limit, sort);
+        size = size==null ? Integer.MAX_VALUE : size;//默认值无穷大
+        page = page==null ? 0 : page;//默认值0
+        Pageable pageable = new PageRequest(page, size, sort);
         return articleDao.findAllByDeletedFalse(pageable);
     }
 
     @Override
-    public List<Article> getArticlesByTagId(int tagId, Integer limit, Integer offset) {
+    public List<Article> getArticlesByTagId(int tagId, Integer page, Integer size) {
         Sort sort = new Sort(Sort.Direction.DESC,"sort");
         sort.and(new Sort(Sort.Direction.DESC,"createTime"));
-        limit = (limit==null || limit==0) ? Integer.MAX_VALUE : limit;//默认值无穷大
-        offset = offset == null ? 0 : limit;//默认值0
-        Pageable pageable = new PageRequest(offset/limit, limit, sort);
+        size = size==null ? Integer.MAX_VALUE : size;//默认值无穷大
+        page = page==null ? 0 : page;//默认值0
+        Pageable pageable = new PageRequest(page, size, sort);
         return articleDao.findAllByTagId(tagId, pageable);
     }
 

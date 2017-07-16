@@ -1,5 +1,6 @@
 package lol.mifan.myblog.controller;
 
+import com.sun.org.apache.xpath.internal.operations.String;
 import lol.mifan.myblog.exception.HttpException;
 import lol.mifan.myblog.po.Article;
 import lol.mifan.myblog.po.Review;
@@ -35,8 +36,8 @@ public class ArticleController {
 
 
     @GetMapping
-    public Object getList(Integer limit, Integer offset) throws HttpException {
-        List<Article> articles = articleService.getList(limit, offset);
+    public Object getList(Integer page, Integer size) throws HttpException {
+        List<Article> articles = articleService.getList(page, size);
         return articleService.toJsonArray(articles);
     }
 
@@ -47,16 +48,16 @@ public class ArticleController {
 
     }
 
-    @GetMapping(value = "/{id}/reviews")
-    public Object getReviews(@PathVariable("id")int id, Integer offset, Integer limit) throws HttpException {
-        List<Review> reviewList = reviewService.getReviewsByArticleId(id, offset, limit);
+    @GetMapping(value = "/{articleId}/reviews")
+    public Object getReviews(@PathVariable("articleId")int articleId, Integer page, Integer size,
+                             @RequestParam(defaultValue = "5") int reviewSize) throws HttpException {
+        List<Review> reviewList = reviewService.getReviewsByArticleId(articleId, page, size);
         List<Object> jsonArray = new ArrayList<>();
         for (Review review : reviewList) {
-            List<Review> list = reviewService.getReviewsByReviewId(review.getId(), offset, limit);
+            List<Review> list = reviewService.getReviewsByReviewId(review.getId(), 0, reviewSize);
             Object jsonObj = reviewService.toJsonObj(review, reviewService.toJsonArray(list));
             jsonArray.add(jsonObj);
         }
-
         return jsonArray;
     }
 

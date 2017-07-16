@@ -30,8 +30,11 @@ public class TagServiceImpl extends EntityServiceImpl<Tag, Integer> implements T
 
 
     @Override
-    public List<Tag> getList(Integer offset, Integer limit, String query) {
-        Pageable pageable = new PageRequest(offset/limit, limit, Sort.Direction.ASC,"name");
+    public List<Tag> getList(Integer page, Integer size, String query) {
+        Sort sort = new Sort(Sort.Direction.DESC,"name");
+        size = size==null ? Integer.MAX_VALUE : size;//默认值无穷大
+        page = page==null ? 0 : page;//默认值0
+        Pageable pageable = new PageRequest(page, size, sort);
         if(StringUtils.isEmpty(query)) {
             return tagDao.findAll(pageable).getContent();
         }
